@@ -15,4 +15,8 @@ class NewsModel extends Model {
     {
         return $this->db->query("INSERT INTO news (title, date, content) VALUES ('$title', '$date', '$content')"); 
     }
+
+    function deleteNew(string $id) {
+        return $this->db->query("DELETE FROM news WHERE id = $id");
+    }
 }
